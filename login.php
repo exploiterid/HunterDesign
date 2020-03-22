@@ -25,7 +25,7 @@
        $queryBugs = mysqli_query($link, "SELECT * FROM bugs");
        $rowBugs = mysqli_fetch_array($queryBugs);
 
-       $secret = '6LccN8IUAAAAADcvrOr5UnbOS_ouYofazJguxKsc';
+       $secret = '6LeisdoUAAAAAMCjWfc0I0_g5Z03Nwgp5lYv0ixv';
        $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
        $responseKeys = json_decode($verify);
        if ($responseKeys->success) {
@@ -132,7 +132,8 @@
     <link rel="icon" href="assets/libs/images/exploiterid.png">
     <!-- Captcha -->
 
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script 
+src="https://www.google.com/recaptcha/api.js"></script>
 
     <!-- Title Page-->
     <title>Login</title>
@@ -190,7 +191,8 @@
                                     <input class="au-input au-input--full" type="password" name="password" placeholder="Password" autocomplete="off" required="" id="password">
                                 </div>
                                 <div class="form-group">
-                                     <div class="g-recaptcha" data-sitekey="6LccN8IUAAAAADSnPnTs_2Ey6Sg9R189DpB_gaZ2"></div>
+                                     <div class="g-recaptcha" 
+data-sitekey="6LeisdoUAAAAABxEEV9MApYbovoG8c13Atu2vQz1"></div>
                                 </div>
                                 <div class="login-checkbox">
                                     <label>

@@ -22,7 +22,7 @@
         $confirm_password = htmlspecialchars(mysqli_real_escape_string($link, $_POST['confirm_password']));
 
         //captcha
-        $secret = '6LccN8IUAAAAADcvrOr5UnbOS_ouYofazJguxKsc';
+        $secret = '6Lcgt9UUAAAAAJKvlULr01Vm4yRkaP_RzOaMqP-O';
         $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
         $responseKeys = json_decode($verify);
         if ($responseKeys->success) {
@@ -139,7 +139,8 @@
                                     <label for="password">Confirm Password</label>
                                     <input class="au-input au-input--full" type="password" name="confirm_password" placeholder="Confirm Password" required="" autocomplete="off" name="confirm_password" id="confirm_password">
                                 </div>
-                                <div class="g-recaptcha" data-sitekey="6LccN8IUAAAAADSnPnTs_2Ey6Sg9R189DpB_gaZ2"></div>
+                                <div class="g-recaptcha" 
+data-sitekey="6Lcgt9UUAAAAAGxEKLikPoFzRi49QAb9hgROp7QR"></div>
                                 <div class="login-checkbox">
                                     <label>
                                         <input type="checkbox" name="agree" checked>Agree the terms and policy

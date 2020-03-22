@@ -11,7 +11,7 @@
         $username = htmlspecialchars($_POST['username']);
 
         //captcha
-        $secret = '6LccN8IUAAAAADcvrOr5UnbOS_ouYofazJguxKsc';
+        $secret = '6Lcgt9UUAAAAAJKvlULr01Vm4yRkaP_RzOaMqP-O';
         $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
         $responseKeys = json_decode($verify);
         if ($responseKeys->success) {
@@ -114,7 +114,8 @@
                                     <input class="au-input au-input--full" type="password" name="new_password" id="new_password" placeholder="New Password" autocomplete="off" required minlength="6">
                                 </div>
                                 <div class="form-group">
-                                    <div class="g-recaptcha" data-sitekey="6LccN8IUAAAAADSnPnTs_2Ey6Sg9R189DpB_gaZ2"></div>
+                                    <div class="g-recaptcha" 
+data-sitekey="6Lcgt9UUAAAAAGxEKLikPoFzRi49QAb9hgROp7QR"></div>
                                 </div>
                                 <div class="form-group">
                                     <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit" name="submit">submit</button>

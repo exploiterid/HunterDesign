@@ -5,7 +5,7 @@ RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^(.*)$ $1.php
 </IfModule>
 
-AuthUserFile C:/xampp/htdocs/allprojects/project/exploiterid/a/.htpasswd
+AuthUserFile /home1/tsuroyac/public_html/exploiter/bounty/a/.htpasswd
 AuthGroupFile /dev/null
 AuthName "Private File"
 AuthType Basic
