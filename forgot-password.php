@@ -11,7 +11,7 @@
         $username = htmlspecialchars($_POST['username']);
 
         //captcha
-        $secret = '6Lcgt9UUAAAAAJKvlULr01Vm4yRkaP_RzOaMqP-O';
+        $secret = '';
         $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
         $responseKeys = json_decode($verify);
         if ($responseKeys->success) {
