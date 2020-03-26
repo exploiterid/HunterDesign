@@ -25,7 +25,7 @@
        $queryBugs = mysqli_query($link, "SELECT * FROM bugs");
        $rowBugs = mysqli_fetch_array($queryBugs);
 
-       $secret = '6LeisdoUAAAAAMCjWfc0I0_g5Z03Nwgp5lYv0ixv';
+       $secret = '';
        $verify = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
        $responseKeys = json_decode($verify);
        if ($responseKeys->success) {
